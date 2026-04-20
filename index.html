@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q1 2026 LP Letter — Base10 Partners</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --b10-blue:#45AEEB;
+  --b10-blue-hover:#26A6ED;
+  --bg:#FFFFFF;
+  --surface:#FFFFFF;
+  --surface-2:#F4F8FB;
+  --border:#E6ECF2;
+  --text:#1A1A1A;
+  --text-dim:#343434;
+  --text-muted:#6C757D;
+  --green:#22C55E;
+  --amber:#EAB308;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.55;
+}
+.container{max-width:1200px;margin:0 auto;padding:0 32px}
+
+.hero{
+  padding:72px 32px 56px;
+  background:radial-gradient(ellipse at top right,rgba(69,174,235,0.12),transparent 60%),linear-gradient(180deg,#F4F8FB,#FFFFFF);
+  border-bottom:1px solid var(--border);
+}
+.hero-inner{max-width:1200px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:14px;margin-bottom:40px}
+.brand-mark{font-weight:800;font-size:22px;letter-spacing:-0.5px;color:var(--text)}
+.brand-mark sup{color:var(--b10-blue);font-size:13px;top:-0.7em}
+.brand-logo{height:28px;width:auto;display:block}
+.brand-divider{width:1px;height:22px;background:var(--border)}
+.brand-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--text-dim);font-weight:600}
+.eyebrow{
+  display:inline-block;font-size:11px;letter-spacing:2px;text-transform:uppercase;
+  color:var(--b10-blue);font-weight:700;margin-bottom:18px;
+  padding:6px 12px;background:rgba(69,174,235,0.1);border:1px solid rgba(69,174,235,0.3);border-radius:20px;
+}
+h1{font-size:54px;font-weight:800;letter-spacing:-1.5px;line-height:1.05;margin-bottom:20px;max-width:900px}
+h1 .accent{color:var(--b10-blue)}
+.hero-sub{font-size:19px;color:var(--text-dim);max-width:820px;line-height:1.55;font-weight:400}
+.hero-sub + .hero-sub{margin-top:14px}
+.hero-meta{margin-top:32px;display:flex;gap:28px;flex-wrap:wrap;font-size:13px;color:var(--text-muted)}
+.hero-meta span strong{color:var(--text);font-weight:600}
+
+section{padding:64px 32px}
+.section-label{display:inline-block;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--b10-blue);font-weight:700;margin-bottom:12px}
+h2{font-size:32px;font-weight:700;letter-spacing:-0.5px;margin-bottom:24px}
+.section-intro{color:var(--text-dim);font-size:16px;max-width:820px;margin-bottom:18px}
+.section-intro + .section-intro{margin-bottom:18px}
+.section-intro:last-child{margin-bottom:0}
+.section-intro a{color:var(--b10-blue);text-decoration:none;border-bottom:1px solid rgba(69,174,235,0.3)}
+.section-intro a:hover{border-bottom-color:var(--b10-blue)}
+.prose-block{margin-bottom:36px}
+
+.kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px}
+.kpi{background:#FFFFFF;border:1px solid var(--border);border-radius:12px;padding:24px;box-shadow:0 2px 20px rgba(26,26,26,0.04)}
+.kpi .label{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-muted);font-weight:700;margin-bottom:8px}
+.kpi .value{font-size:32px;font-weight:800;letter-spacing:-1px;color:var(--b10-blue);line-height:1}
+.kpi .sub{font-size:12px;color:var(--text-dim);margin-top:6px}
+
+.missing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+.missing-card{background:#FFFFFF;border:1px solid var(--border);border-radius:12px;padding:22px;transition:all 0.15s;box-shadow:0 2px 16px rgba(26,26,26,0.03)}
+.missing-card:hover{border-color:var(--b10-blue)}
+.missing-card-header{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.missing-card h4{font-size:16px;font-weight:700;color:var(--text)}
+.missing-card .sub{font-size:11px;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;font-weight:600}
+.missing-card p{font-size:13px;color:var(--text-dim);line-height:1.55}
+.missing-card p a{color:var(--b10-blue);text-decoration:none;border-bottom:1px solid rgba(69,174,235,0.3)}
+.company-logo{width:32px;height:32px;border-radius:8px;background:#fff;padding:3px;object-fit:contain;flex-shrink:0;border:1px solid var(--border)}
+.avatar{width:44px;height:44px;border-radius:50%;object-fit:cover;flex-shrink:0;border:1px solid var(--border);background:#F4F8FB}
+
+/* shadcn-Badge-style chips (rounded-md, border, compact padding, text-xs font-medium) */
+.chip-row{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:3px 9px;background:#F4F8FB;border:1px solid var(--border);border-radius:6px;font-size:12px;font-weight:500;color:var(--text);line-height:1.4;white-space:nowrap}
+.chip img{width:14px;height:14px;border-radius:3px;background:#fff;object-fit:contain}
+
+/* Event photo grid (two landscape photos, side by side) */
+.event-photos{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:36px}
+.event-photos figure{margin:0;border:1px solid var(--border);border-radius:12px;overflow:hidden;background:#F4F8FB;aspect-ratio:4/3;position:relative;box-shadow:0 2px 16px rgba(26,26,26,0.04)}
+.event-photos img{width:100%;height:100%;object-fit:cover;display:block}
+.event-photos figcaption{position:absolute;inset:auto 0 0 0;padding:8px 12px;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#fff;font-weight:600;background:linear-gradient(transparent,rgba(0,0,0,0.55));pointer-events:none}
+.event-photos .placeholder{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--text-muted);font-size:13px;letter-spacing:1px;text-transform:uppercase;font-weight:600}
+
+footer{border-top:1px solid var(--border);padding:40px 32px;margin-top:40px;background:#F4F8FB}
+footer .container{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px}
+.footer-brand{font-size:14px;color:var(--text)}
+.footer-brand sup{color:var(--b10-blue)}
+.footer-meta{font-size:12px;color:var(--text-muted);text-align:right}
+.conf{display:inline-block;padding:4px 10px;background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.3);color:#EF4444;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;border-radius:4px}
+
+@media(max-width:900px){
+  h1{font-size:36px}
+  .kpi-row{grid-template-columns:repeat(2,1fr)}
+  .missing-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="brand">
+      <svg class="brand-logo" viewBox="0 0 419 112" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Base10"><g fill="none" fill-rule="evenodd"><path d="m.96 2.92266667h39.5733333c20.9066667 0 33.0026667 12.09600003 33.0026667 28.37333333 0 10.9013333-6.8693333 19.8613333-15.5306667 22.6986667 9.5573334 2.24 18.816 11.0506666 18.816 24.7893333 0 17.3226667-13.1413333 30.016-33.152 30.016h-42.7093333zm22.9973333 42.41066663h12.8426667c8.2133333 0 13.5893333-4.3306666 13.5893333-11.4986666 0-6.8693334-4.6293333-11.3493334-13.888-11.3493334h-12.544zm0 44.2026667h14.784c9.1093334 0 14.6346667-4.7786667 14.6346667-12.3946667 0-7.3173333-5.376-12.3946666-14.6346667-12.3946666h-14.784zm59.4986667-1.1946667c0-13.1413333 9.7066667-20.608 21.952-22.4l17.472-2.688c4.032-.5973333 5.376-2.5386666 5.376-5.0773333 0-4.3306667-3.733333-8.064-10.901333-8.064-7.914667 0-12.245334 5.376-12.693334 10.9013333l-19.7119997-4.032c.896-10.6026666 10.752-24.64 32.5546667-24.64 24.042667 0 32.853333 13.44 32.853333 28.672v36.288c0 5.8239997.746667 10.7519997.896 11.4986667h-20.458666c-.149334-.597333-.746667-3.285333-.746667-8.362667-3.882667 6.272-11.050667 10.453334-20.906667 10.453334-16.277333 0-25.685333-10.752-25.685333-22.5493337zm31.210667 6.1226667c6.72 0 13.589333-3.2853333 13.589333-14.784v-3.2853333l-14.037333 2.24c-4.778667.7466666-8.362667 2.9866666-8.362667 8.2133333 0 3.8826667 2.538667 7.616 8.810667 7.616zm44.416-6.72 19.264-3.4346667c.298666 5.0773334 3.882666 10.0053334 11.648 10.0053334 5.824 0 8.661333-3.136 8.661333-6.4213334 0-2.688-1.792-4.928-7.317333-6.1226666l-8.512-1.9413334c-15.829334-3.4346666-22.101334-12.3946666-22.101334-22.848 0-13.5893333 11.946667-24.64 28.522667-24.64 21.504 0 28.970667 13.44 29.717333 22.1013334l-18.816 3.4346666c-.597333-4.928-3.733333-9.1093333-10.602666-9.1093333-4.330667 0-8.064 2.5386667-8.064 6.4213333 0 3.136 2.538666 4.928 5.824 5.5253334l9.856 1.9413333c15.381333 3.136 22.848 12.3946667 22.848 23.296 0 12.6933333-9.706667 25.088-29.568 25.088-23.296 0-30.762667-15.0826667-31.36-23.296zm88.618666-24.9386667h29.717334c-.298667-5.6746666-4.181334-12.544-14.933334-12.544-9.557333 0-14.336 7.0186667-14.784 12.544zm31.36 19.264 18.965334 5.376c-3.584 12.8426667-15.381334 23.5946667-34.197334 23.5946667-20.458666 0-38.677333-14.6346667-38.677333-39.5733333 0-23.8933334 17.770667-39.1253334 37.034667-39.1253334 22.997333 0 37.184 14.1866667 37.184 38.08 0 3.136-.298667 6.5706667-.448 7.0186667h-51.669334c.448 8.3626667 8.064 14.336 16.874667 14.336 8.213333 0 12.842667-3.8826667 14.933333-9.7066667z" fill="#111"/><path d="m345.173333 71.4666667h-16.746666v-45.0133334h-16.533334v-11.2c10.346667-.1066666 17.706667-5.9733333 18.88-13.0133333h14.4zm28.373334-34.56c0 5.5466666.64 10.9866666 2.56 15.04 1.92 3.84 5.013333 6.4 10.133333 6.4 5.226667 0 8.213333-2.56 10.133333-6.4 2.026667-4.0533334 2.666667-9.4933334 2.666667-15.04 0-5.5466667-.64-10.9866667-2.666667-15.04-1.92-3.84-4.906666-6.4-10.133333-6.4-5.12 0-8.213333 2.56-10.133333 6.4-1.92 4.0533333-2.56 9.4933333-2.56 15.04zm-16.853334 0c0-8.5333334 1.28-17.1733334 6.08-24.4266667 4.586667-6.93333333 12.266667-11.84 23.466667-11.84 11.306667 0 18.986667 4.90666667 23.573333 11.84 4.8 7.2533333 6.08 15.8933333 6.08 24.4266667 0 8.5333333-1.28 17.1733333-6.08 24.4266666-4.586666 6.8266667-12.266666 11.84-23.573333 11.84-11.2 0-18.88-5.0133333-23.466667-11.84-4.8-7.2533333-6.08-15.8933333-6.08-24.4266666z" fill="#111"/><path d="m309.333333 93.866667h108.8v16h-108.8z" fill="#45aeeb"/></g></svg>
+      <div class="brand-divider"></div>
+      <div class="brand-label">Firm Update · April 2026</div>
+    </div>
+    <div class="eyebrow">Confidential · Prepared for Limited Partners</div>
+    <h1>Base10 Letter to LPs <span style="color:var(--border);font-weight:300">|</span> <span class="accent">Q1 2026</span></h1>
+    <p class="hero-sub">We hope spring has treated you well. We ended 2025 with a meaningful milestone for the firm: <strong style="color:var(--text)">Seed &amp; Series A Fund IV and Series B Fund II together crossed $800M in combined committed capital</strong>, with many of you stepping up from earlier funds and many reading this as new Base10 LPs. Thank you — we feel the support and we are investing behind it.</p>
+    <p class="hero-sub">In addition to the fund-level quarterlies you should have received alongside this letter, a few firm-level updates on team, research, and Purpose programming.</p>
+    <div class="hero-meta">
+      <span><strong>$800M</strong> combined committed capital</span>
+      <span><strong>5</strong> Purpose events hosted in March</span>
+      <span><strong>3</strong> new team members</span>
+      <span>Letter sent <strong>April 2026</strong></span>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="section-label">Team Updates</div>
+    <h2>Team Updates</h2>
+    <p class="section-intro">A few new faces have joined or will be joining the team later this quarter:</p>
+
+    <div class="missing-grid">
+      <div class="missing-card">
+        <div class="missing-card-header">
+          <img class="avatar" src="assets/aaron-hinz.jpg" alt="Aaron Hinz">
+          <div>
+            <h4>Aaron Hinz</h4>
+            <div class="sub">Chief Financial Officer · June 15</div>
+          </div>
+        </div>
+        <p><strong style="color:var(--text)">Aaron Hinz is joining as our Chief Financial Officer on June 15</strong>, coming from Industry Ventures where he ran finance across ~$8B of AUM and 30+ vehicles. As the platform has grown to six funds, a senior finance leader who has run this playbook before has become the right investment. Aaron will own fund operations, LP reporting, and the fund-admin and audit relationships.</p>
+      </div>
+
+      <div class="missing-card">
+        <div class="missing-card-header">
+          <img class="avatar" src="assets/kayley-allen.jpg" alt="Kayley Allen">
+          <div>
+            <h4>Kayley Allen</h4>
+            <div class="sub">Office Manager · April 6</div>
+          </div>
+        </div>
+        <p><strong style="color:var(--text)">Kayley Allen</strong> joined as Office Manager on April 6.</p>
+      </div>
+
+      <div class="missing-card">
+        <div class="missing-card-header">
+          <img class="avatar" src="assets/alejandro-bujan-pampin.jpg" alt="Alejandro Bujan-Pampin">
+          <div>
+            <h4>Alejandro Bujan-Pampin</h4>
+            <div class="sub">Software Engineer · Late April</div>
+          </div>
+        </div>
+        <p><strong style="color:var(--text)">Alejandro Bujan-Pampin</strong> joins as a Software Engineer in late April, relocating from Madrid (most recently Invofox), and will partner with Robby and Ani on internal AI products and portfolio-facing tooling.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-label">Research Spotlight</div>
+    <h2>Research Spotlight</h2>
+    <p class="section-intro">The highlight of the quarter on the research side is that our research operating model is closing the loop between thesis and investment in the same period. Dani London and Caroline Broder published our most substantive dive of Q1, <strong style="color:var(--text)">Insurance: Agentic Back-Office for Carriers and Brokers</strong> (<a href="https://ade-b10.github.io/insurance-research/">ade-b10.github.io/insurance-research</a>). The one-line argument: insurance is one of the last major unconnected financial data ecosystems, and the first company to win the connectivity layer becomes the system of record for insurance data and the distribution layer for everything downstream — verification, monitoring, underwriting signals, and eventually brokerage.</p>
+    <p class="section-intro">That dive was not an academic exercise. It was the spine of a Series A we led in the same quarter, and the founder told us directly that the memo was the deciding factor in choosing Base10 over a competing term sheet. This is the shape we want the research function to have — <strong style="color:var(--text)">published thesis, diligence through the lens of the thesis, investment made, repeat</strong> — and it is how we expect the firm's research output to compound returns over the coming years.</p>
+    <p class="section-intro">Two other pieces are in flight this quarter and will be covered in the next letter: a companion memo on <strong style="color:var(--text)">AI Agent Insurance &amp; Certification</strong> (<a href="https://ade-b10.github.io/ai-agent-insurance-certification/">link</a>) and a survey of <strong style="color:var(--text)">Voice AI infrastructure</strong> (<a href="https://ade-b10.github.io/voice-ai-comps/">link</a>) mapping to several existing portfolio positions.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="section-label">Purpose and Governance</div>
+    <h2>Purpose and Governance</h2>
+    <p class="section-intro">Our Purpose and Governance programming had a landmark quarter. In March we hosted five events across San Francisco and New York, each anchored on a specific institutional or corporate partner:</p>
+
+    <div class="missing-grid">
+      <div class="missing-card">
+        <div class="missing-card-header">
+          <div>
+            <h4>Educating in the Age of AI (SF)</h4>
+            <div class="sub">March 3</div>
+          </div>
+        </div>
+        <p>Base10 Office, with UC Berkeley, Handshake, and CodePath. Moderated by Laura Weidman Powers.</p>
+        <div class="chip-row">
+          <span class="chip"><img src="https://icon.horse/icon/codepath.org" alt="CodePath">CodePath</span>
+          <span class="chip"><img src="https://icon.horse/icon/berkeley.edu" alt="UC Berkeley">UC Berkeley</span>
+          <span class="chip"><img src="https://icon.horse/icon/joinhandshake.com" alt="Handshake">Handshake</span>
+        </div>
+      </div>
+      <div class="missing-card">
+        <div class="missing-card-header">
+          <div>
+            <h4>AI's Impact on the Talent Ecosystem (SF)</h4>
+            <div class="sub">March 4</div>
+          </div>
+        </div>
+        <p>Base10 Office, with CodePath and an Anthropic speaker.</p>
+        <div class="chip-row">
+          <span class="chip"><img src="https://icon.horse/icon/codepath.org" alt="CodePath">CodePath</span>
+          <span class="chip"><img src="https://icon.horse/icon/anthropic.com" alt="Anthropic">Anthropic</span>
+        </div>
+      </div>
+      <div class="missing-card">
+        <div class="missing-card-header">
+          <div>
+            <h4>Educating in the Age of AI (NY)</h4>
+            <div class="sub">March 16</div>
+          </div>
+        </div>
+        <p>Attentive's NYC office, with CodePath, Handshake, and an OpenAI panelist.</p>
+        <div class="chip-row">
+          <span class="chip"><img src="https://icon.horse/icon/codepath.org" alt="CodePath">CodePath</span>
+          <span class="chip"><img src="https://icon.horse/icon/joinhandshake.com" alt="Handshake">Handshake</span>
+          <span class="chip"><img src="https://icon.horse/icon/openai.com" alt="OpenAI">OpenAI</span>
+        </div>
+      </div>
+      <div class="missing-card">
+        <div class="missing-card-header">
+          <div>
+            <h4>AI's Impact on the Talent Ecosystem (NY)</h4>
+            <div class="sub">March 17</div>
+          </div>
+        </div>
+        <p>Amali Restaurant, with Reframe Venture and CodePath.</p>
+        <div class="chip-row">
+          <span class="chip"><img src="https://icon.horse/icon/codepath.org" alt="CodePath">CodePath</span>
+          <span class="chip"><img src="https://icon.horse/icon/reframeventure.com" alt="Reframe Venture">Reframe Venture</span>
+        </div>
+      </div>
+      <div class="missing-card">
+        <div class="missing-card-header">
+          <div>
+            <h4>Tour the Floor</h4>
+            <div class="sub">March 18</div>
+          </div>
+        </div>
+        <p>New York Stock Exchange, with DriveWealth.</p>
+        <div class="chip-row">
+          <span class="chip"><img src="https://icon.horse/icon/drivewealth.com" alt="DriveWealth">DriveWealth</span>
+          <span class="chip"><img src="https://icon.horse/icon/nyse.com" alt="NYSE">NYSE</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="section-intro" style="margin-top:28px">One external note worth surfacing: our education partner <strong style="color:var(--text)">CodePath was named Anthropic's flagship education partner</strong> on February 13 (<a href="https://www.wsj.com/tech/ai/anthropic-takes-big-step-in-ai-race-to-reshape-college-coding-courses-04c48372" target="_blank" rel="noopener">WSJ</a>). This is the clearest outside validation yet of the Purpose network we have been building, and it directly informed the Anthropic programming we hosted with CodePath in March.</p>
+
+    <div class="event-photos">
+      <figure>
+        <div class="placeholder">Event photo 1</div>
+        <img src="assets/purpose-event-1.jpg" alt="Purpose event" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display='none'">
+      </figure>
+      <figure>
+        <div class="placeholder">Event photo 2</div>
+        <img src="assets/purpose-event-2.jpg" alt="Purpose event" onload="this.previousElementSibling.style.display='none'" onerror="this.style.display='none'">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <p class="section-intro" style="font-size:17px;max-width:880px">
+      As always, reach out with any questions — on the team, on the research, or on anything we did not cover here. Fund-level deployment, portfolio, and performance updates will follow in the coming weeks. We look forward to seeing you all at the <strong style="color:var(--text)">2026 AGM on Tuesday, October 27 at Shack15 in San Francisco</strong>. Expect formal invitations to RSVP in the coming weeks.
+    </p>
+    <p class="section-intro" style="font-size:17px;max-width:880px;margin-top:16px">
+      Thank you for your partnership.
+    </p>
+    <p class="section-intro" style="font-size:17px;max-width:880px;margin-top:16px">
+      <strong style="color:var(--text)">Ade, TJ, Inigo, and the Base10 team</strong>
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div>
+      <div class="footer-brand">Base<sup>10</sup> Partners</div>
+      <div style="font-size:12px;color:var(--text-muted);margin-top:4px">Prepared by the Base10 team</div>
+    </div>
+    <div class="footer-meta">
+      <div class="conf">Confidential</div>
+      <div style="margin-top:6px">Q1 2026 LP Letter · Sent April 2026</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  function fallback(img){
+    var isCompany = img.classList.contains('company-logo');
+    var isAvatar = img.classList.contains('avatar');
+    var isInvestor = img.classList.contains('investor-logo');
+    var isChip = img.parentElement && img.parentElement.classList.contains('chip');
+    var size = isAvatar ? 44 : (isCompany ? 32 : (isChip ? 14 : 20));
+    var radius = isAvatar ? 22 : (isCompany ? 8 : (isChip ? 3 : 4));
+    var fontSize = isAvatar ? 16 : (isCompany ? 14 : (isChip ? 9 : 10));
+    var bg = isAvatar ? '#E6ECF2' : '#45AEEB';
+    var fg = isAvatar ? '#6C757D' : '#fff';
+    var name = img.getAttribute('alt') || '';
+    if(!name){
+      var p = img.closest('.company-cell, .investor-cell, .missing-card-header, .chip');
+      if(p){
+        var el = p.querySelector('.company-name, .investor-name, h4');
+        if(el) name = el.textContent;
+        else if(p.classList.contains('chip')) name = p.textContent;
+      }
+    }
+    name = (name||'?').trim();
+    var initial = isAvatar ? name.split(/\s+/).map(function(w){return w.charAt(0).toUpperCase();}).slice(0,2).join('') : name.charAt(0).toUpperCase();
+    var div = document.createElement('span');
+    div.textContent = initial;
+    div.style.cssText = 'display:inline-flex;align-items:center;justify-content:center;width:'+size+'px;height:'+size+'px;min-width:'+size+'px;border-radius:'+radius+'px;background:'+bg+';color:'+fg+';font-weight:700;font-size:'+fontSize+'px;flex-shrink:0;border:1px solid #E6ECF2;';
+    img.replaceWith(div);
+  }
+  function check(img){
+    if(img.complete){
+      if(img.naturalWidth === 0) fallback(img);
+    } else {
+      img.addEventListener('error', function(){ fallback(img); });
+      img.addEventListener('load', function(){ if(img.naturalWidth === 0) fallback(img); });
+    }
+  }
+  document.querySelectorAll('img.company-logo, img.investor-logo, img.avatar, .chip img').forEach(check);
+})();
+</script>
+
+</body>
+</html>
